@@ -5,12 +5,19 @@ import java.util.Locale;
 import java.util.Scanner;
 import java.util.Set;
 
-public class ReadFile {
+public class ReadFile implements EquipmentStorage{
 
+    private final String file;
+
+    public ReadFile(String file) {
+        this.file = file;
+    }
+
+    @Override
     public Set<Equipment> equipmentFromFile() throws Exception {
 
         Set<Equipment> equipment = new HashSet<>();
-        try (Scanner scanner = new Scanner(new File("equipmentBackup.txt"))) {
+        try (Scanner scanner = new Scanner(new File(file))) {
             scanner.useLocale(Locale.US);
 
             while (scanner.hasNextLine()) {
@@ -28,48 +35,29 @@ public class ReadFile {
                     default -> throw new RuntimeException("Not an equipment");
                 }
             }
-        }
-        return equipment;
+        } return equipment;
     }
+
 
 
     private Ball readBall(Scanner ballScanner) {
 
-        int id = readIntAndCr(ballScanner);
+        int id = Integer.parseInt(ballScanner.nextLine());
         String lockerNumber = ballScanner.nextLine();
-        boolean hasToBeReplaced = readBoolAndCr(ballScanner);
+        boolean hasToBeReplaced = Boolean.parseBoolean(ballScanner.nextLine());
         String typeOfBall = ballScanner.nextLine();
-        boolean needMoreAir = readBoolAndCr(ballScanner);
+        boolean needMoreAir = Boolean.parseBoolean(ballScanner.nextLine());
 
         return new Ball(id, lockerNumber, hasToBeReplaced, typeOfBall, needMoreAir);
     }
 
     private TableTennisRacket readRacket(Scanner racketScanner) {
 
-        int id = readIntAndCr(racketScanner);
+        int id = Integer.parseInt(racketScanner.nextLine());
         String lockerNumber = racketScanner.nextLine();
-        boolean hasToBeReplaced = readBoolAndCr(racketScanner);
-        boolean needNewPad = readBoolAndCr(racketScanner);
+        boolean hasToBeReplaced = Boolean.parseBoolean(racketScanner.nextLine());
+        boolean needNewPad = Boolean.parseBoolean(racketScanner.nextLine());
 
         return new TableTennisRacket(id, lockerNumber, hasToBeReplaced, needNewPad);
     }
-
-
-
-    private boolean readBoolAndCr(Scanner scanner) {
-
-        boolean input = scanner.nextBoolean();
-        scanner.nextLine();
-
-        return input;
-    }
-
-    private int readIntAndCr(Scanner scanner) {
-
-        int input = scanner.nextInt();
-        scanner.nextLine();
-
-        return input;
-    }
-
 }

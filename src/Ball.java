@@ -24,7 +24,7 @@ public class Ball extends Equipment{
         return "Ball: " +
                 "id: " + getId() + ", " +
                 "locker: " + getLockerNumber() + ", " +
-                "type of ball: " +typeOfBall + ", " +
+                "type of ball: " + typeOfBall + ", " +
                 "has to be replaced: " + hasToBeReplaced() +  ", " +
                 "need more air: " + needMoreAir;
     }

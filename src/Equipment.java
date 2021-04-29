@@ -1,3 +1,4 @@
+
 public abstract class Equipment {
     private int id;
     private String lockerNumber;
