@@ -1,7 +1,7 @@
 
 public class Ball extends Equipment{
 
-    private boolean needMoreAir;
+    private final boolean needMoreAir;
     private final String typeOfBall;
 
 
@@ -13,10 +13,6 @@ public class Ball extends Equipment{
 
     public boolean needMoreAir() {
         return needMoreAir;
-    }
-
-    public void setNeedMoreAir(boolean needMoreAir) {
-        this.needMoreAir = needMoreAir;
     }
 
     @Override

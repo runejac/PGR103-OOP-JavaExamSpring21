@@ -3,14 +3,15 @@ public class Main {
 
     public static void main(String[] args) throws Exception {
 
-        EquipmentSupply storage = new ReadFile("equipment.txt");
+        // object from the Interface reading the file through the field in ReadFile.java
+        EquipmentSupply supply = new ReadFile("equipment.txt");
 
-        Program program = new Program(storage);
-        /*program.printAllEquipmentToTerminal();*/
+        // task 2) testing if it prints every object
+        Program program = new Program(supply);
+        program.printAllEquipmentToTerminal();
 
         // task 4)
-        program.printBallsNeedingMoreAir();
-        program.printEquipmentNeedingToBeReplaced();
-        program.printTableTennisRacketsNeedingNewPad();
+        Print print = new Print(supply);
+        print.printTask3();
     }
 }

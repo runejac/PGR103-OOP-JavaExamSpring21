@@ -1,8 +1,9 @@
 
 public abstract class Equipment {
+
     private final int id;
-    private String lockerNumber;
-    private boolean hasToBeReplaced;
+    private final String lockerNumber;
+    private final boolean hasToBeReplaced;
 
 
     public Equipment(int id, String lockerNumber, boolean hasToBeReplaced) {
@@ -15,21 +16,12 @@ public abstract class Equipment {
         return id;
     }
 
-
     public String getLockerNumber() {
         return lockerNumber;
     }
 
-    public void setLockerNumber(String lockerNumber) {
-        this.lockerNumber = lockerNumber;
-    }
-
     public boolean hasToBeReplaced() {
         return hasToBeReplaced;
-    }
-
-    public void setHasToBeReplaced(boolean hasToBeReplaced) {
-        this.hasToBeReplaced = hasToBeReplaced;
     }
 
     @Override
