@@ -10,8 +10,10 @@ public class Program {
         equipment = supply.equipmentFromFile();
     }
 
+    // I would have used this class mainly if I wanted to manipulate the program more,
+    // therefore the class Print.java has only one responsibility, to print and nothing else.
 
-    // task 2)
+    // task 2) this method is in this location because it has nothing to do with task 3 and 4
     public void printAllEquipmentToTerminal() {
         System.out.println("Printing every object that is in the Set below:\n");
 
