@@ -11,7 +11,7 @@ public class Ball extends Equipment{
         this.typeOfBall = typeOfBall;
     }
 
-    public boolean isNeedMoreAir() {
+    public boolean needMoreAir() {
         return needMoreAir;
     }
 

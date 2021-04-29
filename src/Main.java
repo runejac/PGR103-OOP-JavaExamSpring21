@@ -3,13 +3,14 @@ public class Main {
 
     public static void main(String[] args) throws Exception {
 
-        EquipmentSupply storage = new ReadFile("equipmentBackup.txt");
-
+        EquipmentSupply storage = new ReadFile("equipment.txt");
 
         Program program = new Program(storage);
-        program.printEquipmentToTerminal();
+        /*program.printAllEquipmentToTerminal();*/
 
-
-
+        // task 4)
+        program.printBallsNeedingMoreAir();
+        program.printEquipmentNeedingToBeReplaced();
+        program.printTableTennisRacketsNeedingNewPad();
     }
 }

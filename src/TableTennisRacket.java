@@ -7,7 +7,7 @@ public class TableTennisRacket extends Equipment{
     }
 
 
-    public boolean isNeedNewPad() {
+    public boolean needNewPad() {
         return needNewPad;
     }
 

@@ -12,7 +12,7 @@ public class ReadFile implements EquipmentSupply {
     }
 
 
-    //task 1) class reads from file, and the method below returns eventually the collection of equipments read from the file
+    // task 1) class reads from file, and the method below returns eventually the collection of equipments read from the file
     @Override
     public Set<Equipment> equipmentFromFile() throws Exception {
 
