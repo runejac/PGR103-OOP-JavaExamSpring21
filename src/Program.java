@@ -2,13 +2,12 @@ import java.util.Set;
 
 public class Program {
 
-    private final EquipmentStorage storage;
     Set<Equipment> equipment;
 
-    public Program(EquipmentStorage storage) throws Exception {
-        this.storage = storage;
+    public Program(EquipmentSupply storage) throws Exception {
         equipment = storage.equipmentFromFile();
     }
+
 
     public void printEquipmentToTerminal() {
         for (Equipment e : equipment) {

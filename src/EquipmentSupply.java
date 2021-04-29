@@ -1,8 +1,6 @@
-import java.awt.*;
 import java.util.Set;
 
-public interface EquipmentStorage {
+public interface EquipmentSupply {
     Set<Equipment> equipmentFromFile() throws Exception;
-    // FIXME delete senere
 
 }

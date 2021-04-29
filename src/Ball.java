@@ -2,7 +2,7 @@
 public class Ball extends Equipment{
 
     private boolean needMoreAir;
-    private String typeOfBall;
+    private final String typeOfBall;
 
 
     public Ball(int id, String lockerNumber, boolean hasToBeReplaced, String typeOfBall, boolean needMoreAir) {

@@ -1,6 +1,6 @@
 
 public abstract class Equipment {
-    private int id;
+    private final int id;
     private String lockerNumber;
     private boolean hasToBeReplaced;
 
@@ -15,9 +15,6 @@ public abstract class Equipment {
         return id;
     }
 
-    public void setId(int id) {
-        this.id = id;
-    }
 
     public String getLockerNumber() {
         return lockerNumber;
